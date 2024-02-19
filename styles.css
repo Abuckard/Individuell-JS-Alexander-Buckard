@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(255, 0, 0);
+    background-image: linear-gradient(to bottom right, #C33764,#1D2671);
+    height: 100vh;
+    width: 100vw;
+
+}
+.planeterna {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+}
+
+.planet {
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+#solen{
+    background-color: yellow;
+}
+#merkurius{
+    background-color: brown;
+}
+#venus {
+    background-color: rgb(104, 76, 1);
+}
+#jorden {
+    background-color: blue;
+}
+#mars {
+    background-color: red;
+}
+#jupiter {
+    background-color: orange;
+}
+#saturnus {
+    background-color: orangered;
+}
+#uranus {
+    background-color: lightblue;
+}
+#neptunus {
+    background-color: blue;
+}
+.information-planet {
+    font-size: 15px;
+}
