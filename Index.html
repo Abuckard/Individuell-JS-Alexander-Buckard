@@ -7,17 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Solsystemet</h1>
-        <h3>Solaris</h3>
-    
-    <form class="form" id="search-form">
-        <input class="search-input" type="text" id="search-input">
-        <button class="submit-btn" type="submit">Sök planet</button>
-    </form>
-    <button id="testknapp">här</button>
+    <div id="solen"></div>
+    <header>
+        <h1 class="rubrik">Solsystemet</h1>
+        <h2>Solaris</h2>
+    </header>
+    <div class="sök">
+        <form class="form" id="search-form">
+            <input class="search-input" type="text" id="search-input" placeholder="Sök planet">
+            <button class="submit-btn" type="submit">SÖK</button>
+        </form>
 
-    <article class="planeterna">
-        <div class="planet" id="solen"></div>
+    </div>
+<div class="planet-rad">
+
+<article class="planeterna">
+
         <div class="planet" id="merkurius"></div>
         <div class="planet" id="venus"></div>
         <div class="planet" id="jorden"></div>
@@ -27,46 +32,49 @@
         <div class="planet" id="uranus"></div>
         <div class="planet" id="neptunus"></div>
     </article>
-
+</div>
+    <div class="information-container">
         <section class="utskrift-container">
-            <h1>Namn
-                <p class="information-planet" id="namn"></p>
-            </h1>
-            <h2>Namn på latin
-                <p class="information-planet" id="namnLatin"></p>
-            </h2>
-            <h2>Himlakroppstyp
-                <p class="information-planet" id="typ"></p>
-            </h2>
-            <h2>Omkrets
-                <p class="information-planet" id="omkrets"></p>
-            </h2>
-            <h2>Distans till solen
-                <p class="information-planet" id="distans"></p>
-            </h2>
-            <h2>Tid för ett varv runt egen axel
-                <p class="information-planet" id="rotation"></p>
-            </h2>
-            <h2>Temperatur dag
-                <p class="information-planet" id="temp-dag"></p>
-            </h2>
-            <h2>Temperatur natt
-                <p class="information-planet" id="temp-natt"></p>
-            </h2>
-            <h2>Tid för ett varv runt solen
-                <p class="information-planet" id="orbital"></p>
-            </h2>
-            <h2>Lite intressant information
-                <p class="information-planet" id="text"></p>
-            </h2>
-            <h2>Antal månar
-                <p class="information-planet" id="månar"></p>
-            </h2>
+
+            <h1 id="namn"></h1>
+
+            <h2 id="namnLatin"></h2>
+
+            <h3>Himlakroppstyp:   
+                <span class="information-planet" id="typ"></span>
+            </h3>
+            <h3>Omkrets: 
+                <span class="information-planet" id="omkrets"></span>
+            </h3>
+            <h3>Distans till solen: 
+                <span class="information-planet" id="distans"></span>
+            </h3>
+            <h3>Tid för ett varv runt egen axel: 
+                <span class="information-planet" id="rotation"></span>
+            </h3>
+            <h3>Temperatur dag: 
+                <span class="information-planet" id="temp-dag"></span>
+            </h3>
+            <h3>Temperatur natt: 
+                <span class="information-planet" id="temp-natt"></span>
+            </h3>
+            <h3>Tid för ett varv runt solen: 
+                <span class="information-planet" id="orbital"></span>
+            </h3>
+            <h3>Lite intressant information: 
+                
+            </h3>
+            <h3>Antal månar: 
+                <span class="information-planet" id="månar"></span>
+            </h3>
 
         </section>
+        <span class="information-planet" id="text"></span>
+    </div>
     
 
 
+
     
 
 
@@ -82,7 +90,8 @@
 
 
 
-    <script src="myscript.js"></script>
+
+    <script type="module" src="myscript.js"></script>
 
 </body>
 </html>

@@ -1,51 +1,175 @@
 body {
     background-color: rgb(255, 0, 0);
     background-image: linear-gradient(to bottom right, #C33764,#1D2671);
-    height: 100vh;
-    width: 100vw;
+    max-width: 1440px;
 
+}
+header {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    color: rgb(2, 2, 117);
+}
+.rubrik {
+    margin-bottom: 0px;
 }
 .planeterna {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin-left: 200px;
 
     
 }
-
+.sök {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px ;
+}
+button {
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    height: 50px;
+    margin-left: 50px;
+}
+.search-input {
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+}
 .planet {
-    background-color: red;
+
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 0 70px white;
+}
+#jorden:hover, #merkurius:hover, #venus:hover, #mars:hover {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-360deg);
+    transition: all 1s ease-in-out 0s;
+}
+#jupiter:hover, #saturnus:hover, #uranus:hover, #neptunus:hover {
+    width: 250px;
+    height: 250px;
+    transform: rotate(-360deg);
+    transition: all 1s ease-in-out 0s;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+    color: white;
+}
+h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #solen{
     background-color: yellow;
+    overflow: hidden;
+    position: absolute;
+    left: -800px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    box-shadow: 0 0 70px orange;
+    
+    
 }
 #merkurius{
-    background-color: brown;
+    z-index: 1;
+    background: linear-gradient(rgb(126, 100, 100), rgba(161, 61, 61, 0.959), rgb(126, 100, 100), rgba(161, 61, 61, 0.959), rgb(126, 100, 100), rgba(161, 61, 61, 0.959) );
 }
 #venus {
-    background-color: rgb(104, 76, 1);
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(rgb(180, 103, 1), rgba(252, 76, 23, 0.959), rgb(180, 103, 1), rgba(252, 76, 23, 0.959), rgb(180, 103, 1), rgba(252, 76, 23, 0.959), rgb(180, 103, 1), rgba(252, 76, 23, 0.959), rgb(180, 103, 1), rgba(252, 76, 23, 0.959), rgb(180, 103, 1), rgba(252, 76, 23, 0.959) );
 }
 #jorden {
-    background-color: blue;
+    transform: rotate(350deg);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(rgb(4, 0, 235), rgba(10, 252, 22, 0.959), rgb(0, 33, 121),rgb(22, 146, 18), rgba(58, 248, 0, 0.959),rgb(54, 54, 255), rgb(0, 20, 75)  );
 }
 #mars {
-    background-color: red;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(rgb(243, 0, 0), rgba(92, 1, 1, 0.959), rgb(255, 44, 44), rgba(231, 3, 3, 0.959), rgb(150, 1, 1), rgba(49, 0, 0, 0.959) );
 }
 #jupiter {
-    background-color: orange;
+    transform: rotate(160deg);
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(rgb(131, 48, 10), rgba(112, 38, 38, 0.918), rgb(104, 4, 4), rgba(92, 34, 24, 0.959), rgb(68, 18, 18), rgba(107, 31, 31, 0.959) );
 }
 #saturnus {
-    background-color: orangered;
+    width: 180px;
+    height: 180px;
+    transform: rotate(150deg);
+    background: linear-gradient(rgb(212, 146, 116), rgba(65, 30, 30, 0.918), rgb(102, 69, 69), rgba(70, 31, 24, 0.959), rgb(126, 100, 100), rgba(107, 31, 31, 0.959) );
 }
 #uranus {
-    background-color: lightblue;
+    width: 120px;
+    height: 120px;
+    transform: rotate(170deg);
+    background: linear-gradient(rgb(94, 208, 243), rgba(37, 143, 175, 0.959), rgb(148, 214, 245), rgba(30, 109, 139, 0.959), rgb(49, 217, 247), rgba(104, 139, 192, 0.959)) ;
+
 }
 #neptunus {
-    background-color: blue;
+    transform: rotate(150deg);
+    background: linear-gradient(rgb(5, 2, 150), rgba(28, 36, 110, 0.959), rgb(83, 158, 228), rgb(5, 2, 150), rgba(105, 116, 221, 0.959), rgb(29, 73, 114)) ;
+    width: 100px;
+    height: 100px;
 }
 .information-planet {
     font-size: 15px;
+    padding-left: 5px;
+    vertical-align: middle;
+
+}
+.information-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.utskrift-container {
+    width: 50%;
+    color: aqua;
+    font-size: 15px;
+
+}
+span {
+    color: aqua;
+
+}
+#namn, #namnLatin {
+    color: rgb(255, 255, 255)
+}
+.planet-rad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#text {
+    max-width: 300px;
+    font-size: 20px
 }

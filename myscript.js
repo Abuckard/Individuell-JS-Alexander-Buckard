@@ -1,16 +1,9 @@
-// Här är alla variablar som hämtas från HTML
-let baseUrl = `https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com`
-let knapp = document.getElementById("testknapp")
-let solen = document.getElementById("solen")
-let merkurius = document.getElementById("merkurius")
-let venus = document.getElementById("venus")
-let jorden = document.getElementById("jorden")
-let mars = document.getElementById("mars")
-let jupiter = document.getElementById("jupiter")
-let saturnus= document.getElementById("saturnus")
-let uranus = document.getElementById("uranus")
-let neptunus = document.getElementById("neptunus")
+import { bindPlanetClicks } from './planetClicks.js';
+bindPlanetClicks(fetchPlanetData);
 
+
+
+// Här är alla variablar för att kunna skriva in saker i HTML
 let typ = document.getElementById("typ")
 let namn = document.getElementById("namn")
 let namnLatin = document.getElementById("namnLatin")
@@ -24,8 +17,8 @@ let text = document.getElementById("text")
 let månar = document.getElementById("månar")
 
 let form = document.getElementById("search-form")
-let sökInput = document.getElementById("search-input")
-let submitKnapp = document.getElementById("submit")
+
+
 
 // Här är tomma variablar för API, detta för att minska problem med async funktioner.
 let apiKey = ""
@@ -48,70 +41,6 @@ fetch(urlKeys, {
 })
 .catch((error) => console.error('Error:', error));
 
-
-
-
-
-
-knapp.addEventListener("click", () => {
-
-
-
-urlBodies = `https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies?${apiKey}`
-fetch(urlBodies, {
-    method:'GET',
-    headers: {
-        'x-zocom': apiKey
-    }
-})
-.then(response => response.json())
-.then(data => console.log(data))
-console.log(urlBodies)
-})
-
-
-// Här är eventlisteners till alla planeterna
-solen.addEventListener("click", () => {
-  fetchPlanetData(0)
-}
-)
-merkurius.addEventListener("click", () => {
-    fetchPlanetData(1)
-}
-)
-venus.addEventListener("click", () => {
-    fetchPlanetData(2)
-}
-)
-jorden.addEventListener("click", () => {
-    fetchPlanetData(3)
-}
-)
-mars.addEventListener("click", () => {
-    fetchPlanetData(4)
-}
-)
-jupiter.addEventListener("click", () => {
-    fetchPlanetData(5)
-}
-)
-saturnus.addEventListener("click", () => {
-    fetchPlanetData(6)
-}
-)
-uranus.addEventListener("click", () => {
-    fetchPlanetData(7)
-}
-)
-neptunus.addEventListener("click", () => {
-    fetchPlanetData(8)
-}
-)
-
-    
-
-
-// Modul för att fetcha informationen för varje planet. Hämtas med hjälp av index.
 // Här skrivs också allting ut i HTML.
 // Om något skulle bli fel med hämtandet från APIn så skrivs det ut ett felmeddelande.
 function fetchPlanetData(index){
