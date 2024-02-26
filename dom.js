@@ -1,0 +1,12 @@
+// Här är alla variablar för att kunna skriva in saker i HTML
+export let typ = document.getElementById("typ")
+export let namn = document.getElementById("namn")
+export let namnLatin = document.getElementById("namnLatin")
+export let rotation = document.getElementById("rotation")
+export let omkrets = document.getElementById("omkrets")
+export let tempDag = document.getElementById("temp-dag")
+export let tempNatt = document.getElementById("temp-natt")
+export let distans = document.getElementById("distans")
+export let orb = document.getElementById("orbital")
+export let text = document.getElementById("text")
+export let månar = document.getElementById("månar")

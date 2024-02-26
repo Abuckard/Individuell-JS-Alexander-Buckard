@@ -1,20 +1,11 @@
 import { bindPlanetClicks } from './planetClicks.js';
+import { typ, namn, namnLatin, rotation, omkrets, tempDag, tempNatt, distans, orb, text, månar } from './dom.js'
 bindPlanetClicks(fetchPlanetData);
 
 
 
 // Här är alla variablar för att kunna skriva in saker i HTML
-let typ = document.getElementById("typ")
-let namn = document.getElementById("namn")
-let namnLatin = document.getElementById("namnLatin")
-let rotation = document.getElementById("rotation")
-let omkrets = document.getElementById("omkrets")
-let tempDag = document.getElementById("temp-dag")
-let tempNatt = document.getElementById("temp-natt")
-let distans = document.getElementById("distans")
-let orb = document.getElementById("orbital")
-let text = document.getElementById("text")
-let månar = document.getElementById("månar")
+
 
 let form = document.getElementById("search-form")
 
