@@ -4,7 +4,7 @@ bindPlanetClicks(fetchPlanetData);
 
 
 
-// Här är alla variablar för att kunna skriva in saker i HTML
+ 
 
 
 let form = document.getElementById("search-form")
@@ -28,7 +28,7 @@ fetch(urlKeys, {
 .then(response => response.json())
 .then(data => {
   apiKey = data.key;
-  //console.log(apiKey);
+
 })
 .catch((error) => console.error('Error:', error));
 
