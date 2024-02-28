@@ -242,12 +242,9 @@ span, p {
 }
 
 
-/* On screens that are 992px wide or less, the background color is blue */
+/* Liten responsivitet för att det ska bli finare på laptops. */
 @media screen and (max-width: 1366px) {
-    body {
-      background-color: blue;
-      color: white;
-    }
+
 
     @keyframes snurra {
         from {
