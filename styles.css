@@ -1,8 +1,15 @@
+/* INFORMATION
+    INFORMATION
+        INFORMATION
+Jag har satt en max-width för att jag jobbar med så stor skärm.
+Det fanns ju inget krav på responsivitet men jag vill att det ska se okej även om man tittar på en laptop, 
+så jag har lagt till media-query och flex-wrap för att försöka lösa det. */
+
 body {
     background-color: rgb(255, 0, 0);
     background-image: linear-gradient(to bottom right, #C33764,#1D2671);
-    max-width: 1440px;
-    height: 1440px;
+    max-width: 1920px;
+   
 
     
     font-family: "Syncopate", sans-serif;
@@ -16,7 +23,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    color: rgb(2, 2, 117);
+    color: aqua;
 
 
 }
@@ -27,13 +34,7 @@ header {
     align-items: center;
     margin-bottom: 50px ;
 }
-button {
-    border-radius: 25px;
-    border: none;
-    width: 100px;
-    height: 50px;
-    margin-left: 50px;
-}
+
 .search-input {
     width: 300px;
     height: 50px;
@@ -110,6 +111,7 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-left: 200px;
     margin-bottom: 100px;
     
@@ -240,3 +242,57 @@ span, p {
 }
 
 
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 1366px) {
+    body {
+      background-color: blue;
+      color: white;
+    }
+
+    @keyframes snurra {
+        from {
+            transform: rotate(0deg) scale(1);
+        }
+        to {
+            transform: rotate(360deg) scale(1);
+        }
+    }
+    #jupiter {
+        transform: rotate(160deg);
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(rgb(131, 48, 10), rgba(112, 38, 38, 0.918), rgb(104, 4, 4), rgba(92, 34, 24, 0.959), rgb(68, 18, 18), rgba(107, 31, 31, 0.959) );
+    }
+    #saturnus {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        transform: rotate(150deg);
+        background: linear-gradient(rgb(212, 146, 116), rgba(65, 30, 30, 0.918), rgb(102, 69, 69), rgba(70, 31, 24, 0.959), rgb(126, 100, 100), rgba(107, 31, 31, 0.959) );
+    }
+    #saturnus-ringar {
+        background-color: rgba(255, 255, 255, 0.4);
+        width: 80px;
+        height: 5.5px;
+        rotate: 180deg;
+        border-radius: 75%;
+        position: absolute;
+        top: 50%;
+        left: -13%;
+    }
+    #uranus {
+        width: 60px;
+        height: 60px;
+        transform: rotate(170deg);
+        background: linear-gradient(rgb(94, 208, 243), rgba(37, 143, 175, 0.959), rgb(148, 214, 245), rgba(30, 109, 139, 0.959), rgb(49, 217, 247), rgba(104, 139, 192, 0.959)) ;
+    
+    }
+    #neptunus {
+        transform: rotate(150deg);
+        background: linear-gradient(rgb(5, 2, 150), rgba(28, 36, 110, 0.959), rgb(83, 158, 228), rgb(5, 2, 150), rgba(105, 116, 221, 0.959), rgb(29, 73, 114)) ;
+        width: 60px;
+        height: 60px;
+    }
+    
+  }
+  
